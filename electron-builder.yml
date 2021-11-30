@@ -1,4 +1,4 @@
 appId: com.mps.AutoUpdateGateway
 publish:
   provider: github
-  token: [YOUR GITHUB ACCESS TOKEN]
+  token: ["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"]
