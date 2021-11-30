@@ -1,0 +1,24 @@
+{
+  "name": "updater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/AllanPinheiroDeLima/mps-uploader.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^16.0.2",
+    "electron-builder": "^22.14.5"
+  },
+  "dependencies": {
+    "electron-updater": "^4.6.1"
+  }
+}
