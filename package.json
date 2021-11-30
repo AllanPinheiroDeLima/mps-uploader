@@ -1,7 +1,7 @@
 {
   "name": "updater",
   "version": "1.0.0",
-  "description": "",
+  "description": "An auto updater app",
   "main": "main.js",
   "repository": {
     "type" : "git",
@@ -10,8 +10,45 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build": "electron-builder build  --win --publish never",
+    "build": "electron-builder build --win --publish never",
     "deploy": "electron-builder build --win --publish always"
+  },
+  "build": {
+    "asar": false,
+    "appId": "com.mps.AutoUpdateGateway",
+    "publish": {
+      "provider": "github",
+      "token": "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"
+    },
+    "productName": "Attendant",
+    "directories": {
+        "buildResources": "dist"
+    },
+    "files": [
+      {
+        "from": ".",
+        "to": ".",
+        "filter": [
+            "electron",
+            "images",
+            "node_modules",
+            "main.js",
+            "package.json"
+        ]
+        },
+        {
+            "from": "./xxx/build",
+            "to": ".",
+            "filter": ["**/*"]
+        }
+    ],
+    "win": {
+        "asar": false,
+        "target": "nsis"
+    },
+    "nsis": {
+      "deleteAppDataOnUninstall": true
+    }
   },
   "keywords": [],
   "author": "",
