@@ -16,6 +16,12 @@ function createWindow () {
   mainWindow.on('closed', function () {
     mainWindow = null;
   });
+
+  
+  mainWindow.on('ready-to-show', () => {
+    console.log("checking updates")
+    autoUpdater.checkForUpdatesAndNotify();
+  });
 }
 
 app.on('ready', () => {
@@ -38,10 +44,6 @@ ipcMain.on('app_version', (event) => {
   event.sender.send('app_version', { version: app.getVersion() });
 });
 
-mainWindow.on('ready-to-show', () => {
-  console.log("checking updates")
-  autoUpdater.checkForUpdatesAndNotify();
-});
 
 autoUpdater.on('update-available', () => {
   console.log("update available")
