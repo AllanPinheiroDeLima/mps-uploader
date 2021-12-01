@@ -33,7 +33,8 @@
             "images",
             "node_modules",
             "main.js",
-            "package.json"
+            "package.json",
+            "index.html"
         ]
         },
         {
