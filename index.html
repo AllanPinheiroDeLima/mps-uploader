@@ -59,10 +59,6 @@
     function restartApp() {
       ipcRenderer.send('restart_app');
     }
-
-    ipcMain.on('restart_app', () => {
-      autoUpdater.quitAndInstall();
-    });
   </script>
 </body>
 <style>

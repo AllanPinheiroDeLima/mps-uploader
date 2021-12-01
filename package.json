@@ -1,6 +1,6 @@
 {
   "name": "updater",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "An auto updater app",
   "main": "main.js",
   "repository": {
@@ -18,7 +18,7 @@
     "appId": "com.mps.AutoUpdateGateway",
     "publish": {
       "provider": "github",
-      "token": "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"
+      "token": "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"
     },
     "productName": "Attendant",
     "directories": {
