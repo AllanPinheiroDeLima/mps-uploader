@@ -1,6 +1,6 @@
 {
   "name": "updater",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An auto updater app",
   "main": "main.js",
   "repository": {

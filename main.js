@@ -38,11 +38,13 @@ ipcMain.on('app_version', (event) => {
   event.sender.send('app_version', { version: app.getVersion() });
 });
 
-mainWindow.once('ready-to-show', () => {
+mainWindow.on('ready-to-show', () => {
+  console.log("checking updates")
   autoUpdater.checkForUpdatesAndNotify();
 });
 
 autoUpdater.on('update-available', () => {
+  console.log("update available")
   mainWindow.webContents.send('update_available');
 });
 
